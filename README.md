@@ -138,9 +138,9 @@ Embedding the ANE:
 5. On the iOS side, you need to make sure you have included the resources at the top of you package. *next to the main .swf of your project*. [Check here for the resources](https://github.com/myflashlab/GoogleVR-ANE/tree/master/FD/bin) **CardboardSDK.bundle**, **GoogleKitCore.bundle**, **GoogleKitDialogs.bundle**, **GoogleKitHUD.bundle** and **MaterialRobotoFontLoader.bundle**
 
 # Commercial Version
-http://www.myflashlabs.com/product/google-virtual-reality-air-native-extension/
+http://www.myflashlabs.com/product/virtual-reality-air-native-extension/
 
-![Google VR ANE](http://www.myflashlabs.com/wp-content/uploads/2016/04/product_adobe-air-ane-extension-google-vr-595x738.jpg)
+![Google VR ANE](http://www.myflashlabs.com/wp-content/uploads/2016/06/product_adobe-air-ane-virtual-reality-595x738.jpg)
 
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
