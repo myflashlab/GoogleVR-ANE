@@ -1,0 +1,4 @@
+Google VR Adobe Air Native Extension
+
+*Jun 22, 2016 - V1.0.0*
+* beginning of the journey!
