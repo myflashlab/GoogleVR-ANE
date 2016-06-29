@@ -10,7 +10,6 @@ Google Virtual Reality SDK works on Android and iOS so why shouldn't it work on 
 
 # asdoc
 [find the latest asdoc for this ANE here.](http://myflashlab.github.io/asdoc/index.html?com/myflashlab/air/extensions/googleVR/package-detail.html&com/myflashlab/air/extensions/googleVR/class-list.html)  
-[How to get started? **read here**](https://github.com/myflashlab/GoogleVR-ANE/wiki)
 
 **NOTICE**: the demo ANE works only after you hit the "OK" button in the dialog which opens. in your tests make sure that you are NOT calling other ANE methods prior to hitting the "OK" button.
 [Download the ANE](https://github.com/myflashlab/GoogleVR-ANE/tree/master/FD/lib)
@@ -144,7 +143,6 @@ http://www.myflashlabs.com/product/virtual-reality-air-native-extension/
 
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
-[How to get started with Games Services?](https://github.com/myflashlab/GoogleVR-ANE/wiki)
 
 # Changelog
 *Jun 22, 2016 - V1.0.0*
