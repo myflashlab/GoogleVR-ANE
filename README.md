@@ -1,4 +1,4 @@
-# Google VR ANE V1.0.0 (beta) for Android+iOS
+# Google VR ANE V1.0.0 for Android+iOS
 Google Virtual Reality SDK works on Android and iOS so why shouldn't it work on Air? The current release of this cool ANE will let you use 360 degree images in your own application. we are working on adding 360 video playback also but we decided to release the ANE sooner because we were receiving many requests for supporting 360 image VR experience. So, here it is.
 
 *Notice: To support Virtual 3D world is not in our to-do list at the moment because rendering the 3D world in Virtual Reality is happening in OpenGL inside Java/Objectice-C environment and ANEs cannot provide this feature to AS3* 
