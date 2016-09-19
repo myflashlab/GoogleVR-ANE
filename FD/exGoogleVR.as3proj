@@ -58,9 +58,6 @@
     <element path="lib\barcodeExtension.ane" />
     <element path="lib\googlePlayServices.ane" />
     <element path="lib\googleVR.ane" />
-    <element path="lib\gvr_common.ane" />
-    <element path="lib\gvr_commonwidget.ane" />
-    <element path="lib\gvr_panowidget.ane" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

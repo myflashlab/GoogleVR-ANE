@@ -2,7 +2,7 @@
 "AcknowledgeAction" = "ठीक";
 
 /* "Cancel" text label where the standard 'abort this action' button is offered. (8 chars.) */
-"CancelAction" = "अभी नहीं";
+"CancelAction" = "रद्द करें";
 
 /* Label for a button indicating an action should be attempted again. (40 chars.) */
 "TryAgainAction" = "फिर से प्रयास करें";

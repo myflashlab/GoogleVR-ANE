@@ -1,5 +1,5 @@
 /* Label for the close button on a dialog that needs acknowledgement. (15 chars.) */
-"AcknowledgeAction" = "Тийм";
+"AcknowledgeAction" = "OK";
 
 /* "Cancel" text label where the standard 'abort this action' button is offered. (8 chars.) */
 "CancelAction" = "Цуцлах";
@@ -8,7 +8,7 @@
 "TryAgainAction" = "Дахин оролдоно уу";
 
 /* Label for the close button on a dialog that needs acknowledgement. (15 chars.) */
-"GoogleKitDialogsAcknowledgeAction" = "Тийм";
+"GoogleKitDialogsAcknowledgeAction" = "OK";
 
 /* "Cancel" text label where the standard 'abort this action' button is offered. (8 chars.) */
 "GoogleKitDialogsCancelAction" = "Цуцлах";

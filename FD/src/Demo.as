@@ -25,10 +25,7 @@ package
 	import flash.ui.Multitouch;
 	import flash.ui.MultitouchInputMode;
 	
-	import com.myflashlab.air.extensions.googleVR.VR;
-	import com.myflashlab.air.extensions.googleVR.events.ImgViewEvents;
-	import com.myflashlab.air.extensions.googleVR.events.VREvents;
-	import com.myflashlab.air.extensions.googleVR.imgView.VRImageConfig;
+	import com.myflashlab.air.extensions.googleVR.*;
 	
 	import com.luaye.console.C;
 	
@@ -146,10 +143,10 @@ package
 		{
 			VR.init();
 			
-			// add listeners
-			VR.api.addEventListener(VREvents.NATIVE_WINDOW_CLOSED, onVRClosed);
-			VR.api.imageView.addEventListener(ImgViewEvents.LOAD_FAILED, onLoadFailed);
-			VR.api.imageView.addEventListener(ImgViewEvents.LOAD_SUCCESS, onLoadSuccess);
+			// add general VR listeners
+			VR.api.addEventListener(VREvents.VR_CLOSED, onVRClosed);
+			VR.api.addEventListener(VREvents.DID_TAP, onVRTapped);
+			VR.api.addEventListener(VREvents.DISPLAY_MODE_CHANGED, onVRModeChanged);
 			
 			//----------------------------------------------------------------------
 			var btn0:MySprite = createBtn("start image 360");
@@ -172,32 +169,166 @@ package
 				//if (dis.exists) dis.deleteFile();
 				//srcExitBtn.copyTo(dis, true);
 				
-				var vrSetting:VRImageConfig = new VRImageConfig();
+				var vrSetting:VRConfigImg = new VRConfigImg();
 				vrSetting.btnExit = srcExitBtn;
 				vrSetting.image360 = srcImg360;
-				vrSetting.imageType = VRImageConfig.TYPE_STEREO_OVER_UNDER;
-				vrSetting.vrModeButtonEnabled = false;
+				vrSetting.imageType = VRConfig.TYPE_STEREO_OVER_UNDER;
+				vrSetting.stereoModeButtonEnabled = true;
+				vrSetting.infoButtonEnabled = false;
+				vrSetting.touchTrackingEnabled = true;
 				
-				
+				VR.api.imageView.addEventListener(VREvents.LOAD_FAILED, onLoadFailed);
+				VR.api.imageView.addEventListener(VREvents.LOAD_SUCCESS, onLoadSuccess);
 				VR.api.imageView.attach(vrSetting);
+			}
+			
+			function onLoadFailed(e:VREvents):void
+			{
+				VR.api.imageView.removeEventListener(VREvents.LOAD_FAILED, onLoadFailed);
+				VR.api.imageView.removeEventListener(VREvents.LOAD_SUCCESS, onLoadSuccess);
+				
+				trace("onLoadFailed: " + e.msg);
+			}
+			
+			function onLoadSuccess(e:VREvents):void
+			{
+				VR.api.imageView.removeEventListener(VREvents.LOAD_FAILED, onLoadFailed);
+				VR.api.imageView.removeEventListener(VREvents.LOAD_SUCCESS, onLoadSuccess);
+				
+				trace("onLoadSuccess");
 			}
 			//----------------------------------------------------------------------
 			
+			var btn1:MySprite = createBtn("start video 360");
+			btn1.addEventListener(MouseEvent.CLICK, startVid360);
+			_list.add(btn1);
+			
+			function startVid360(e:MouseEvent):void
+			{
+				VR.api.videoView.removeEventListener(VREvents.LOAD_FAILED, 	onVideoLoadFailed);
+				VR.api.videoView.removeEventListener(VREvents.LOAD_SUCCESS, onVideoLoadSuccess);
+				
+				VR.api.videoView.removeEventListener(VREvents.PAUSED, 		onVideoPaused);
+				VR.api.videoView.removeEventListener(VREvents.REACHED_END, 	onVideoReachedEnd);
+				VR.api.videoView.removeEventListener(VREvents.RESUMED, 		onVideoResumed);
+				VR.api.videoView.removeEventListener(VREvents.STOPPED, 		onVideoStopped);
+				VR.api.videoView.removeEventListener(VREvents.POS_UPDATED, 	onVideoPositionUpdated);
+				
+				C.log("launching a 360 Video view...");
+				trace("On older Android devices you may see your AIR content all black when you return from the 360 video view");
+				trace("This is an old bug in AIR and we hope Adobe would find the reason and hopefully fix it someday.");
+				trace("In the meanwhile, read this to fix the problem: http://forum.starling-framework.org/topic/ane-fix-for-blackblank-screen-bug-when-returning-to-air-android-apps");
+				
+				var srcVid360:File = File.applicationDirectory.resolvePath("360Vid.mp4");
+				var srcExitBtn:File = File.applicationDirectory.resolvePath("exit.png");
+				
+				var vrSetting:VRConfigVid = new VRConfigVid();
+				vrSetting.btnExit = srcExitBtn;
+				vrSetting.video360 = srcVid360;
+				//vrSetting.video360URL = "http://192.168.0.11/project/products/MyFlashLab_ANEs/googleVR/Vx.x.x/FD/bin/360Vid.mp4";
+				vrSetting.videoType = VRConfig.TYPE_STEREO_OVER_UNDER;
+				vrSetting.stereoModeButtonEnabled = true;
+				vrSetting.infoButtonEnabled = false;
+				vrSetting.touchTrackingEnabled = true;
+				vrSetting.fullscreenButtonEnabled = true;
+				
+				VR.api.videoView.addEventListener(VREvents.LOAD_FAILED, 	onVideoLoadFailed);
+				VR.api.videoView.addEventListener(VREvents.LOAD_SUCCESS, 	onVideoLoadSuccess);
+				
+				VR.api.videoView.addEventListener(VREvents.PAUSED, 			onVideoPaused);
+				VR.api.videoView.addEventListener(VREvents.REACHED_END, 	onVideoReachedEnd);
+				VR.api.videoView.addEventListener(VREvents.RESUMED, 		onVideoResumed);
+				VR.api.videoView.addEventListener(VREvents.STOPPED, 		onVideoStopped);
+				VR.api.videoView.addEventListener(VREvents.POS_UPDATED, 	onVideoPositionUpdated);
+				
+				VR.api.videoView.attach(vrSetting);
+			}
+			
+			function onVideoLoadFailed(e:VREvents):void
+			{
+				VR.api.videoView.removeEventListener(VREvents.LOAD_FAILED, onVideoLoadFailed);
+				VR.api.videoView.removeEventListener(VREvents.LOAD_SUCCESS, onVideoLoadSuccess);
+				
+				trace("onVideoLoadFailed: " + e.msg);
+			}
+			
+			function onVideoLoadSuccess(e:VREvents):void
+			{
+				VR.api.videoView.removeEventListener(VREvents.LOAD_FAILED, onVideoLoadFailed);
+				VR.api.videoView.removeEventListener(VREvents.LOAD_SUCCESS, onVideoLoadSuccess);
+				
+				trace("onVideoLoadSuccess, video duration = " + e.duration);
+			}
+			
+			function onVideoPaused(e:VREvents):void
+			{
+				trace("onVideoPaused");
+			}
+			
+			function onVideoResumed(e:VREvents):void
+			{
+				trace("onVideoResumed");
+			}
+			
+			function onVideoStopped(e:VREvents):void
+			{
+				trace("onVideoStopped");
+			}
+			
+			function onVideoReachedEnd(e:VREvents):void
+			{
+				VR.api.videoView.seekTo(0);
+				VR.api.videoView.resume();
+				
+				trace("onVideoReachedEnd");
+			}
+			
+			function onVideoPositionUpdated(e:VREvents):void
+			{
+				trace("position updated... " + e.position + " / " + e.duration);
+			}
 		}
 		
 		private function onVRClosed(e:VREvents):void
 		{
-			C.log("vr window closed!");
+			trace("vr window closed!");
 		}
 		
-		private function onLoadFailed(e:ImgViewEvents):void
+		private function onVRTapped(e:VREvents):void
 		{
-			C.log("onLoadFailed: " + e.msg);
+			trace("vr window tapped!");
+			
+			trace(VR.api.headRotation);
+			//VR.api.displayMode = DisplayMode.FULLSCREEN_STEREO;
+			
+			if (VR.api.videoView.isPaused)
+			{
+				VR.api.videoView.resume();
+			}
+			else
+			{
+				VR.api.videoView.pause();
+			}
 		}
 		
-		private function onLoadSuccess(e:ImgViewEvents):void
+		private function onVRModeChanged(e:VREvents):void
 		{
-			C.log("onLoadSuccess");
+			switch (e.displaymode) 
+			{
+				case DisplayMode.EMBEDDED:
+					trace("vr mode changed: EMBEDDED");
+				break;
+				
+				case DisplayMode.FULLSCREEN_MONO:
+					trace("vr mode changed: FULLSCREEN_MONO");
+				break;
+				
+				case DisplayMode.FULLSCREEN_STEREO:
+					trace("vr mode changed: FULLSCREEN_STEREO");
+				break;
+				
+				default:
+			}
 		}
 		
 		

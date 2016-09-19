@@ -2,7 +2,7 @@
 "AcknowledgeAction" = "U redu";
 
 /* "Cancel" text label where the standard 'abort this action' button is offered. (8 chars.) */
-"CancelAction" = "Odustani";
+"CancelAction" = "Otkaži";
 
 /* Label for a button indicating an action should be attempted again. (40 chars.) */
 "TryAgainAction" = "Pokušaj ponovo";
