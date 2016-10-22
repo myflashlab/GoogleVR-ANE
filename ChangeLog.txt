@@ -1,5 +1,8 @@
 Google VR Adobe Air Native Extension
 
+*Oct 22, 2016 - V2.0.1*
+* Fixed iOS conflicts with the [GPS ANE](http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/).
+
 *Sep 20, 2016 - V2.0.0*
 * Updated to Google VR V0.9.1 and Wrote everything from scratch because a LOT has changed since the VR SDK is not yet stable and new versions are changing dratstically.
 * Added 360 video support
