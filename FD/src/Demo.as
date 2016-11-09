@@ -26,6 +26,7 @@ package
 	import flash.ui.MultitouchInputMode;
 	
 	import com.myflashlab.air.extensions.googleVR.*;
+	import com.myflashlab.air.extensions.nativePermissions.PermissionCheck;
 	
 	import com.luaye.console.C;
 	
@@ -35,6 +36,8 @@ package
 	 */
 	public class Demo extends Sprite 
 	{
+		private var _exPermissions:PermissionCheck = new PermissionCheck();
+		
 		private const BTN_WIDTH:Number = 150;
 		private const BTN_HEIGHT:Number = 60;
 		private const BTN_SPACE:Number = 2;
@@ -86,8 +89,7 @@ package
 			_list.vDirection = Direction.TOP_TO_BOTTOM;
 			_list.space = BTN_SPACE;
 			
-			init();
-			onResize();
+			checkPermissions();
 		}
 		
 		private function onInvoke(e:InvokeEvent):void
@@ -136,6 +138,33 @@ package
 			if (_body)
 			{
 				_body.y = stage.stageHeight - _body.height;
+			}
+		}
+		
+		private function checkPermissions():void
+		{
+			// first you need to make sure you have access to the Strorage if you are on Android?
+			var permissionState:int = _exPermissions.check(PermissionCheck.SOURCE_STORAGE);
+			
+			if (permissionState == PermissionCheck.PERMISSION_UNKNOWN || permissionState == PermissionCheck.PERMISSION_DENIED)
+			{
+				_exPermissions.request(PermissionCheck.SOURCE_STORAGE, onRequestResult);
+			}
+			else
+			{
+				init();
+			}
+			
+			function onRequestResult($state:int):void
+			{
+				if ($state != PermissionCheck.PERMISSION_GRANTED)
+				{
+					C.log("You did not allow the app the required permissions!");
+				}
+				else
+				{
+					init();
+				}
 			}
 		}
 		
@@ -287,6 +316,8 @@ package
 			{
 				trace("position updated... " + e.position + " / " + e.duration);
 			}
+			
+			onResize();
 		}
 		
 		private function onVRClosed(e:VREvents):void

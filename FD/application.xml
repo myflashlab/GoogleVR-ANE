@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/22.0">
+<application xmlns="http://ns.adobe.com/air/application/24.0">
   <id>com.doitflash.gvr</id>
-  <versionNumber>2.0.1</versionNumber>
+  <versionNumber>2.1.0</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGoogleVR</filename>
   <name>Google VR</name>
@@ -13,6 +13,10 @@
 	
 	<!--Android SDK 19 or higher can run Google VR only-->
 	<uses-sdk android:minSdkVersion="19" />
+	
+	<!--The new Permission thing on Android works ONLY if you are targetting Android SDK 23 or higher-->
+	<uses-sdk android:targetSdkVersion="23"/>
+	
 	
 	<!-- 
 		For Google VR to work properly, it is adviced to set largeHeap to true. learn
@@ -109,11 +113,16 @@
 	
 	<extensionID>com.myflashlab.air.extensions.googleVR</extensionID>
 	
-	<!--below are the common dependencies that Google VR relies on-->
+	<!-- Required if you are targeting AIR 24+ and have to take care of Permissions mannually -->
+	<extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
+	
+	<!-- below are the common dependencies that Google VR relies on; Only required when compiling for Android-->
 	<extensionID>com.myflashlab.air.extensions.dependency.gvr.common</extensionID>
 	<extensionID>com.myflashlab.air.extensions.dependency.gvr.commonwidget</extensionID>
 	<extensionID>com.myflashlab.air.extensions.dependency.gvr.panowidget</extensionID>
 	<extensionID>com.myflashlab.air.extensions.dependency.gvr.videowidget</extensionID>
+	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
 	
   </extensions>
 </application>
