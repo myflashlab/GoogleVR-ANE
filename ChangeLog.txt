@@ -1,5 +1,9 @@
 Google VR Adobe Air Native Extension
 
+*Jan 10, 2017 - V2.1.1*
+* Repackaged the ANE with AIR 24 to fix the ```ane is not a valid native extension file``` error started with some ANEs in AIR SDK 24
+* Requires AIR SDK 24+ to compile the ANE
+
 *Nov 09, 2016 - V2.1.0*
 * Optimized for Android manual permissions if you are targeting AIR SDK 24+
 * The following dependencies are now also required by the ANE androidSupport.ane and overrideAir.ane

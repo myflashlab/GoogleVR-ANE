@@ -144,6 +144,8 @@ package
 		private function checkPermissions():void
 		{
 			// first you need to make sure you have access to the Strorage if you are on Android?
+			// use the PermissionCheck ANE for this reason: 
+			// http://www.myflashlabs.com/product/native-access-permission-check-settings-menu-air-native-extension/
 			var permissionState:int = _exPermissions.check(PermissionCheck.SOURCE_STORAGE);
 			
 			if (permissionState == PermissionCheck.PERMISSION_UNKNOWN || permissionState == PermissionCheck.PERMISSION_DENIED)

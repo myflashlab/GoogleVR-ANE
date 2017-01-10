@@ -1,4 +1,4 @@
-# Google VR ANE V2.1.0 for Android+iOS
+# Google VR ANE V2.1.1 for Android+iOS
 Google Virtual Reality SDK works on Android and iOS so why shouldn't it work on Air? The current release of this cool ANE will let you use 360 degree images and videos in your own application.
 
 *Notice: To support Virtual 3D world is not in our to-do list at the moment because rendering the 3D world in Virtual Reality is happening in OpenGL inside Java/Objectice-C environment and ANEs cannot provide this feature to AS3* 
@@ -279,7 +279,7 @@ Embedding the ANE:
 # Requirements 
 1. Android API 19 or higher
 2. iOS SDK 8.0 or higher
-3. AIR SDK 22 or higher
+3. AIR SDK 24 or higher
 4. This ANE is dependent on **androidSupport.ane**, **overrideAir.ane**, **gvr_common.ane**, **gvr_commonwidget.ane**, **gvr_panowidget.ane** and **gvr_videowidget.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
 5. On the iOS side, you need to make sure you have included the resources at the top of you package. *next to the main .swf of your project*. [Check here for the resources](https://github.com/myflashlab/GoogleVR-ANE/tree/master/FD/bin) **CardboardSDK.bundle**, **GoogleKitCore.bundle**, **GoogleKitDialogs.bundle**, **GoogleKitHUD.bundle** and **MaterialRobotoFontLoader.bundle**
 
@@ -303,6 +303,10 @@ http://www.myflashlabs.com/product/virtual-reality-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Jan 10, 2017 - V2.1.1*
+* Repackaged the ANE with AIR 24 to fix the ```ane is not a valid native extension file``` error started with some ANEs in AIR SDK 24
+* Requires AIR SDK 24+ to compile the ANE
+
 *Nov 09, 2016 - V2.1.0*
 * Optimized for Android manual permissions if you are targeting AIR SDK 24+
 * The following dependencies are now also required by the ANE androidSupport.ane and overrideAir.ane
