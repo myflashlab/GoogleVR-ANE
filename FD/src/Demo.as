@@ -332,6 +332,7 @@ package
 			trace("vr window tapped!");
 			
 			trace(VR.api.headRotation);
+			trace("volume = " + VR.api.videoView.volume);
 			//VR.api.displayMode = DisplayMode.FULLSCREEN_STEREO;
 			
 			if (VR.api.videoView.isPaused)

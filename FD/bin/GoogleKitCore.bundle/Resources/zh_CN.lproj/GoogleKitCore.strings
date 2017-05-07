@@ -62,6 +62,9 @@
 "GoogleKitCoreMenuButton" = "菜单";
 
 /* Label for a button for opening a menu of extra actions. */
+"GoogleKitCoreMoreHorizButton" = "更多";
+
+/* Label for a button for opening a menu of extra actions. */
 "GoogleKitCoreMoreVertButton" = "更多";
 
 /* Label for a button for information related to a person. */
@@ -74,7 +77,7 @@
 "GoogleKitCoreReplyButton" = "回复";
 
 /* Label for a button for replying to all recipients of a message. */
-"GoogleKitCoreReplyAllButton" = "全部回复";
+"GoogleKitCoreReplyAllButton" = "回复全部";
 
 /* Label for a button for initiating a search operation. */
 "GoogleKitCoreSearchButton" = "搜索";

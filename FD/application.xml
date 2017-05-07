@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/24.0">
+<application xmlns="http://ns.adobe.com/air/application/25.0">
   <id>com.doitflash.gvr</id>
-  <versionNumber>2.1.1</versionNumber>
+  <versionNumber>2.2.0</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGoogleVR</filename>
   <name>Google VR</name>
@@ -77,6 +77,10 @@
 			<key>NSAllowsArbitraryLoads</key>
 			<true/>
 		</dict>
+		
+		<!-- Required when user wants to scan barcodes while using the card -->
+		<key>NSCameraUsageDescription</key>
+		<string>Camera usage description</string>
 		
 	]]></InfoAdditions>
     <requestedDisplayResolution>high</requestedDisplayResolution>

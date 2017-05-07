@@ -5,7 +5,7 @@
 "CancelAction" = "ຍົກເລີກ";
 
 /* Label for a button indicating an action should be attempted again. (40 chars.) */
-"TryAgainAction" = "ລອງໃໝ່ອີກເທື່ອນຶ່ງ";
+"TryAgainAction" = "ລອງໃໝ່ອີກເທື່ອໜຶ່ງ";
 
 /* Label for the close button on a dialog that needs acknowledgement. (15 chars.) */
 "GoogleKitDialogsAcknowledgeAction" = "ຕົກລົງ";
@@ -14,7 +14,7 @@
 "GoogleKitDialogsCancelAction" = "ຍົກເລີກ";
 
 /* Label for a button indicating an action should be attempted again. (40 chars.) */
-"GoogleKitDialogsTryAgainAction" = "ລອງໃໝ່ອີກເທື່ອນຶ່ງ";
+"GoogleKitDialogsTryAgainAction" = "ລອງໃໝ່ອີກເທື່ອໜຶ່ງ";
 
 /* Word read aloud when VoiceOver is enabled before showing an alert. (No limit chars.) */
 "GoogleKitDialogsAccessibilityAlertAnnouncement" = "ແຈ້ງເຕືອນ";

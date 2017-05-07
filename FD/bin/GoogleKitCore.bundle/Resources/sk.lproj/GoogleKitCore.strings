@@ -62,6 +62,9 @@
 "GoogleKitCoreMenuButton" = "Ponuka";
 
 /* Label for a button for opening a menu of extra actions. */
+"GoogleKitCoreMoreHorizButton" = "Viac";
+
+/* Label for a button for opening a menu of extra actions. */
 "GoogleKitCoreMoreVertButton" = "Ďalšie";
 
 /* Label for a button for information related to a person. */
@@ -77,7 +80,7 @@
 "GoogleKitCoreReplyAllButton" = "Odpovedať všetkým";
 
 /* Label for a button for initiating a search operation. */
-"GoogleKitCoreSearchButton" = "Vyhľadať";
+"GoogleKitCoreSearchButton" = "Hľadať";
 
 /* Label for a button for showing settings related to the current screen. */
 "GoogleKitCoreSettingsButton" = "Nastavenia";

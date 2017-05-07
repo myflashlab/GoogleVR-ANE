@@ -1,5 +1,34 @@
 Google VR Adobe Air Native Extension
 
+*May 07, 2017 - V2.2.0*
+* Updated the SDK to V1.40.0 for both Android and iOS. To update your current project do the following:
+  * update your Android [dependencies](https://github.com/myflashlab/common-dependencies-ANE): 
+    * gvr_common.ane
+	* gvr_commonwidget.ane
+	* gvr_panowidget.ane
+	* gvr_videowidget.ane
+	* androidSupport.ane
+	* overrideAir.ane
+  * overrideAir.ane is also needed on the iOS side
+  * Download [this package](https://dl.google.com/firebase/sdk/ios/3_13_0/Firebase-3.13.0.zip) and look for the following two frameworks and copy them to your AIR SDK folder at: **AIR_SDK/lib/aot/stub**
+    * **GoogleToolboxForMac.framework**
+	* **GTMSessionFetcher.framework**
+  * Finally, remove old iOS resources from your app bin folder and copy the new ones [found here](https://github.com/myflashlab/GoogleVR-ANE/tree/master/FD/bin).
+    * CardboardSDK.bundle
+	* GoogleKitCore.bundle
+	* GoogleKitDialogs.bundle
+	* GoogleKitHUD.bundle
+	* MaterialRobotoFontLoader.bundle
+* Added Volume property
+* Supporting ```infoButtonEnabled``` on the iOS side also
+* On the iOS side, the following usage description is needed:
+  ```xml
+  <!-- Required when user wants to scan barcodes while using the card -->
+  <key>NSCameraUsageDescription</key>
+  <string>Camera usage description</string>
+  ```
+* Fixed the white screen problem on AIR 24+
+
 *Jan 10, 2017 - V2.1.1*
 * Repackaged the ANE with AIR 24 to fix the ```ane is not a valid native extension file``` error started with some ANEs in AIR SDK 24
 * Requires AIR SDK 24+ to compile the ANE

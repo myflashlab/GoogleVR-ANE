@@ -47,7 +47,7 @@
 "GoogleKitCoreDeleteButton" = "Устгах";
 
 /* Label for a button for composing an email. */
-"GoogleKitCoreEmailButton" = "Э-мэйл";
+"GoogleKitCoreEmailButton" = "И-мэйл";
 
 /* Label for a button for accessing help content. */
 "GoogleKitCoreHelpButton" = "Тусламж";
@@ -60,6 +60,9 @@
 
 /* Label for a button for opening a menu. */
 "GoogleKitCoreMenuButton" = "Цэс";
+
+/* Label for a button for opening a menu of extra actions. */
+"GoogleKitCoreMoreHorizButton" = "Илүү";
 
 /* Label for a button for opening a menu of extra actions. */
 "GoogleKitCoreMoreVertButton" = "Дэлгэрэнгүй";

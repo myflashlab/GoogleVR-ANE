@@ -47,7 +47,7 @@
 "GoogleKitCoreDeleteButton" = "حذف";
 
 /* Label for a button for composing an email. */
-"GoogleKitCoreEmailButton" = "ایمیل";
+"GoogleKitCoreEmailButton" = "رایانامه";
 
 /* Label for a button for accessing help content. */
 "GoogleKitCoreHelpButton" = "راهنما";
@@ -60,6 +60,9 @@
 
 /* Label for a button for opening a menu. */
 "GoogleKitCoreMenuButton" = "منو";
+
+/* Label for a button for opening a menu of extra actions. */
+"GoogleKitCoreMoreHorizButton" = "بیشتر";
 
 /* Label for a button for opening a menu of extra actions. */
 "GoogleKitCoreMoreVertButton" = "بیشتر";
