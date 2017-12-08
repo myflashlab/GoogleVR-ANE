@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/25.0">
+<application xmlns="http://ns.adobe.com/air/application/28.0">
   <id>com.doitflash.gvr</id>
-  <versionNumber>2.2.0</versionNumber>
+  <versionNumber>3.0.0</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGoogleVR</filename>
   <name>Google VR</name>
@@ -52,9 +52,9 @@
 	  
 	 <InfoAdditions><![CDATA[
 	
-		<!--iOS 8.0 or higher can support this ANE-->
+		<!--iOS 9.0 or higher can support this ANE-->
 		<key>MinimumOSVersion</key>
-		<string>8.0</string>
+		<string>9.0</string>
 		 
 		<key>UIPrerenderedIcon</key>
 		<true/>

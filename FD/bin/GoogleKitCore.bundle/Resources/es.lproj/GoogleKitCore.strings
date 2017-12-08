@@ -89,4 +89,4 @@
 "GoogleKitCoreStarButton" = "Destacar";
 
 /* Label for a button for composing a text/SMS message. */
-"GoogleKitCoreTextSMSButton" = "Texto";
+"GoogleKitCoreTextSMSButton" = "SMS";

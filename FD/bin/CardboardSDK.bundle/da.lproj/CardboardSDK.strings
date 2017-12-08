@@ -70,14 +70,14 @@
 "OnboardingIntroLine2" = "Par din telefon med din fremviser for at få den bedst mulige oplevelse.";
 
 /* Label shown below the onboarding intro line to ask if they have a cardboard viewer. (40 chars) */
-"OnboardingNoViewerPrompt" = "Har du ikke en Cardboard-fremviser?";
+"OnboardingNoViewerPrompt" = "Har du ikke en Cardboard-brille?";
 
 /* Button title shown next to the "no cardboard viewer" prompt to go get one. (15 chars) */
 "OnboardingGetCardboardButton" = "Køb en nu";
 
 /* Instruction for the user that they should now put their phone in Cardboard. This is a generic
  * instruction when the view type is not known. (50 chars) */
-"PlaceYourPhoneInCardboard" = "Placer din telefon i Cardboard-fremviseren.";
+"PlaceYourPhoneInCardboard" = "Placer din telefon i Cardboard-brillen.";
 
 /* Instruction for the user that they should now put their phone in Cardboard. This is used as a
  * format string where the parameter is the view name. (50 chars) */

@@ -45,7 +45,7 @@
 "InvalidQRCode" = "QR कोड अमान्य है";
 
 /* Error message shown to the user if the QR code is not a valid device profile. (60 chars) */
-"ParsingFailed" = "Url पार्स करने में त्रुटि";
+"ParsingFailed" = "Url पार्स करने में गड़बड़ी";
 
 /* Format string used as a temporary message shown after a successful device profile is set.
  * (60 chars) */

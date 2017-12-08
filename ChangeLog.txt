@@ -1,9 +1,19 @@
 Google VR Adobe Air Native Extension
 
+*Nov 30, 2017 - V3.0.0*
+* Optimized for the [ANE-LAB Software](https://github.com/myflashlab/ANE-LAB/)
+* Updated Android SDK to V1.70.0 and iOS SDK to V1.100.0. To update your current project do the following:
+  * update your Android [dependencies](https://github.com/myflashlab/common-dependencies-ANE): 
+  * gvr_common.ane, gvr_commonwidget.ane, gvr_panowidget.ane, gvr_videowidget.ane
+	* androidSupport.ane V26.0.2+
+  * overrideAir.ane V5.0.0+
+  * Update the framework files, **GoogleToolboxForMac.framework** and **GTMSessionFetcher.framework** from [Firebase SDK V4.6.0](https://dl.google.com/firebase/sdk/ios/4_6_0/Firebase-4.6.0.zip)
+  * Update the iOS resource bundles from https://github.com/myflashlab/GoogleVR-ANE/blob/master/gvr_iOS_res_V3.0.0.zip
+
 *May 07, 2017 - V2.2.0*
 * Updated the SDK to V1.40.0 for both Android and iOS. To update your current project do the following:
   * update your Android [dependencies](https://github.com/myflashlab/common-dependencies-ANE): 
-    * gvr_common.ane
+  * gvr_common.ane
 	* gvr_commonwidget.ane
 	* gvr_panowidget.ane
 	* gvr_videowidget.ane
@@ -12,13 +22,13 @@ Google VR Adobe Air Native Extension
   * overrideAir.ane is also needed on the iOS side
   * Download [this package](https://dl.google.com/firebase/sdk/ios/3_13_0/Firebase-3.13.0.zip) and look for the following two frameworks and copy them to your AIR SDK folder at: **AIR_SDK/lib/aot/stub**
     * **GoogleToolboxForMac.framework**
-	* **GTMSessionFetcher.framework**
+	  * **GTMSessionFetcher.framework**
   * Finally, remove old iOS resources from your app bin folder and copy the new ones [found here](https://github.com/myflashlab/GoogleVR-ANE/tree/master/FD/bin).
     * CardboardSDK.bundle
-	* GoogleKitCore.bundle
-	* GoogleKitDialogs.bundle
-	* GoogleKitHUD.bundle
-	* MaterialRobotoFontLoader.bundle
+	  * GoogleKitCore.bundle
+	  * GoogleKitDialogs.bundle
+	  * GoogleKitHUD.bundle
+	  * MaterialRobotoFontLoader.bundle
 * Added Volume property
 * Supporting ```infoButtonEnabled``` on the iOS side also
 * On the iOS side, the following usage description is needed:

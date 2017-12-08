@@ -61,7 +61,7 @@
 "TroubleShootingTips" = "نصائح تحرّى الخلل وإصلاحه";
 
 /* Button label for the control that allows the user to skip the QR code step. (40 chars) */
-"SkipButtonLabel" = "تخطٍ";
+"SkipButtonLabel" = "تخطي";
 
 /* First line of the onboarding introduction. (40 chars) */
 "OnboardingIntroLine1" = "لنبدأ الإعداد";

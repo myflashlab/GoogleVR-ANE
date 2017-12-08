@@ -71,7 +71,7 @@
 "GoogleKitCorePersonButton" = "אדם";
 
 /* Label for a button for refreshing the current content. */
-"GoogleKitCoreRefreshButton" = "רענן";
+"GoogleKitCoreRefreshButton" = "רענון";
 
 /* Label for a button for replying to the author of a message. */
 "GoogleKitCoreReplyButton" = "השב";
