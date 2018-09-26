@@ -1,0 +1,1 @@
+360Vid.mp4, 360Img.jpg and all the **.bundle packages have been copied here from Google VR github repository. https://github.com/google/vrview

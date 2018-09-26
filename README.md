@@ -1,7 +1,7 @@
-# Google VR ANE V3.0.0 for Android+iOS
+# Google VR ANE V3.1.0 for Android+iOS
 Google Virtual Reality SDK works on Android and iOS so why shouldn't it work on Air? This cool ANE will let you use 360 images and videos in your own AIR application.
 
-*Notice: Supporting Virtual 3D world is not in our to-do list. At least not for the moment, because rendering the 3D world in Virtual Reality is happening in OpenGL inside Java/Obj-C environment and ANEs cannot provide this feature to AS3* 
+*Notice: Supporting Virtual 3D world is not in our to-do list. At least not for the moment, because rendering the 3D world in Virtual Reality is happening in OpenGL inside the native environment and ANEs cannot provide this feature to AS3* 
 
 **Main Features:**
 * 360 image preview based on device orientation
@@ -11,12 +11,12 @@ Google Virtual Reality SDK works on Android and iOS so why shouldn't it work on 
 
 # asdoc
 [find the latest asdoc for this ANE here.](http://myflashlab.github.io/asdoc/index.html?com/myflashlab/air/extensions/googleVR/package-detail.html&com/myflashlab/air/extensions/googleVR/class-list.html)  
-[Download the ANE](https://github.com/myflashlab/GoogleVR-ANE/tree/master/FD/lib)  
+[Download the ANE](https://github.com/myflashlab/GoogleVR-ANE/tree/master/AIR/lib)  
 
 **NOTICE 2**: On older Android devices you may see your AIR content all black when you return from the 360 video view. This is an old bug in AIR and we hope Adobe would find the reason and hopefully fix it someday. In the meanwhile, [read this to fix the problem](http://forum.starling-framework.org/topic/ane-fix-for-blackblank-screen-bug-when-returning-to-air-android-apps)
 
 # AIR Usage General listeners
-For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GoogleVR-ANE/blob/master/FD/src/Demo.as).
+For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GoogleVR-ANE/blob/master/AIR/src/Demo.as).
 
 ```actionscript
 import com.myflashlab.air.extensions.googleVR.*;
@@ -76,7 +76,7 @@ function onVRModeChanged(e:VREvents):void
 ```
 
 # AIR Usage 360 Image
-For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GoogleVR-ANE/blob/master/FD/src/Demo.as).
+For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GoogleVR-ANE/blob/master/AIR/src/Demo.as).
 
 ```actionscript
 // configure the 360 image object you want to launch
@@ -111,7 +111,7 @@ function onLoadSuccess(e:VREvents):void
 ```
 
 # AIR Usage 360 Video
-For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GoogleVR-ANE/blob/master/FD/src/Demo.as).
+For the complete AS3 code usage, see the [demo project here](https://github.com/myflashlab/GoogleVR-ANE/blob/master/AIR/src/Demo.as).
 
 ```actionscript
 // configure the 360 video object you want to launch
@@ -190,9 +190,7 @@ FOR ANDROID:
 	
 	<!--Android SDK 19 or higher can run Google VR only-->
 	<uses-sdk android:minSdkVersion="19" />
-	
-	<!--The new Permission thing on Android works ONLY if you are targetting Android SDK 23 or higher-->
-	<uses-sdk android:targetSdkVersion="23"/>
+	<uses-sdk android:targetSdkVersion="26"/>
 	
 	<!-- 
 		For Google VR to work properly, it is adviced to set largeHeap to true. learn
@@ -264,13 +262,12 @@ Embedding the ANE:
 	<extensionID>com.myflashlab.air.extensions.dependency.gvr.commonwidget</extensionID>
 	<extensionID>com.myflashlab.air.extensions.dependency.gvr.panowidget</extensionID>
 	<extensionID>com.myflashlab.air.extensions.dependency.gvr.videowidget</extensionID>
-	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport</extensionID>
-	<extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
+	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport.core</extensionID>
+	<extensionID>com.myflashlab.air.extensions.dependency.androidSupport.v4</extensionID>
+    <extensionID>com.myflashlab.air.extensions.dependency.overrideAir</extensionID>
 	
 	<!-- And finally embed the main GVR ANE -->
     <extensionID>com.myflashlab.air.extensions.googleVR</extensionID>
-	
-	<!-- Required if you are targeting AIR 24+ and have to take care of Permissions mannually -->
 	<extensionID>com.myflashlab.air.extensions.permissionCheck</extensionID>
 	
   </extensions>
@@ -278,43 +275,39 @@ Embedding the ANE:
 ```
 
 # Requirements 
-1. Android API 19 or higher
-2. iOS SDK 9.0 or higher
-3. AIR SDK 28 or higher
-4. This ANE is dependent on **androidSupport.ane**, **overrideAir.ane**, **gvr_common.ane**, **gvr_commonwidget.ane**, **gvr_panowidget.ane** and **gvr_videowidget.ane** You need to add these ANEs to your project too. [Download them from here:](https://github.com/myflashlab/common-dependencies-ANE)
-5. Even if you are building for iOS only, you'd still need **overrideAir.ane**.
-6. On the iOS side, you need to make sure you have included the resources at the root of you package. 
+1. Android API 19+
+2. iOS SDK 9.0+
+3. AIR SDK 30+
+4. On the iOS side, you need to make sure you have included the resources at the root of you package. 
   * **CardboardSDK.bundle**
   * **GoogleKitCore.bundle**
   * **GoogleKitDialogs.bundle**
   * **GoogleKitHUD.bundle**
   * **MaterialRobotoFontLoader.bundle**
-7. Moreover, on the iOS side, you will need **GoogleToolboxForMac.framework** and **GTMSessionFetcher.framework** available in your *AIR_SDK/lib/aot/stub* folder. Download them from [this package - Firebase SDK V4.6.0](https://dl.google.com/firebase/sdk/ios/4_6_0/Firebase-4.6.0.zip).
+5. Moreover, on the iOS side, you will need **GoogleToolboxForMac.framework** and **GTMSessionFetcher.framework** available in your *AIR_SDK/lib/aot/stub* folder. Download them from [this package - Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip).
 
 # Permissions
-If you are targeting AIR 24 or higher, you need to [take care of the permissions mannually](http://www.myflashlabs.com/adobe-air-app-permissions-android-ios/). Below are the list of Permissions this ANE might require. (Note: *Necessary Permissions* are those that the ANE will NOT work without them and *Optional Permissions* are those which are needed only if you are using some specific features in the ANE.)
+Below are the list of Permissions this ANE might require. Check out the demo project available at this repository to see how we have used the [PermissionCheck ANE](http://www.myflashlabs.com/product/native-access-permission-check-settings-menu-air-native-extension/) to ask for the permissions.
 
-Check out the demo project available at this repository to see how we have used our [PermissionCheck ANE](http://www.myflashlabs.com/product/native-access-permission-check-settings-menu-air-native-extension/) to ask for the permissions.
-
-**Necessary Permissions:**  
-none
-
-**Optional Permissions:**  
-
-1. PermissionCheck.SOURCE_CAMERA
-2. PermissionCheck.SOURCE_STORAGE
+Necessary | Optional
+--------------------------- | ---------------------------
+- | [SOURCE_STORAGE](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_STORAGE)  
+-  | [SOURCE_CAMERA](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_CAMERA)  
 
 # Commercial Version
 http://www.myflashlabs.com/product/virtual-reality-air-native-extension/
 
-![Google VR ANE](http://www.myflashlabs.com/wp-content/uploads/2016/06/product_adobe-air-ane-virtual-reality-595x738.jpg)
+![Google VR ANE](https://www.myflashlabs.com/wp-content/uploads/2016/06/product_adobe-air-ane-virtual-reality-595x738.jpg)
 
 # Tutorials
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
-*Nov 30, 2017 - V3.0.0*
+*Sep 22, 2018 - V3.1.0*
+* Removed androidSupport dependency
+* Synced iOS frameworks with Firebase ANEs. Update "GoogleToolboxForMac.framework" and "GTMSessionFetcher.framework" to [V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip)
 
+*Nov 30, 2017 - V3.0.0*
 * Optimized for the [ANE-LAB Software](https://github.com/myflashlab/ANE-LAB/)
 * Updated Android SDK to V1.70.0 and iOS SDK to V1.100.0. To update your current project do the following:
   * update your Android [dependencies](https://github.com/myflashlab/common-dependencies-ANE): 
@@ -325,7 +318,6 @@ http://www.myflashlabs.com/product/virtual-reality-air-native-extension/
   * Update the iOS resource bundles from [https://github.com/myflashlab/GoogleVR-ANE/blob/master/gvr_iOS_res_V3.0.0.zip](https://github.com/myflashlab/GoogleVR-ANE/blob/master/gvr_iOS_res_V3.0.0.zip)
   
 *May 07, 2017 - V2.2.0*
-
 * Updated the SDK to V1.40.0 for both Android and iOS. To update your current project do the following:
   * update your Android [dependencies](https://github.com/myflashlab/common-dependencies-ANE): 
     * gvr_common.ane
@@ -355,24 +347,19 @@ http://www.myflashlabs.com/product/virtual-reality-air-native-extension/
 * Fixed the white screen problem on AIR 24+
 
 *Jan 10, 2017 - V2.1.1*
-
 * Repackaged the ANE with AIR 24 to fix the ```ane is not a valid native extension file``` error started with some ANEs in AIR SDK 24
 * Requires AIR SDK 24+ to compile the ANE
 
 *Nov 09, 2016 - V2.1.0*
-
 * Optimized for Android manual permissions if you are targeting AIR SDK 24+
 * The following dependencies are now also required by the ANE androidSupport.ane and overrideAir.ane
 
 *Oct 22, 2016 - V2.0.1*
-
 * Fixed iOS conflicts with the [GPS ANE](http://www.myflashlabs.com/product/gps-ane-adobe-air-native-extension/).
 
 *Sep 20, 2016 - V2.0.0*
-
 * Updated to Google VR V0.9.1 and Wrote everything from scratch because a LOT has changed since the VR SDK is not yet stable and new versions are changing dratstically.
 * Added 360 video support
 
 *Jun 22, 2016 - V1.0.0*
-
 * beginning of the journey!
