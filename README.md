@@ -291,8 +291,8 @@ Below are the list of Permissions this ANE might require. Check out the demo pro
 
 Necessary | Optional
 --------------------------- | ---------------------------
-- | [SOURCE_STORAGE](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_STORAGE)  
--  | [SOURCE_CAMERA](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_CAMERA)  
+. | [SOURCE_STORAGE](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_STORAGE)  
+.  | [SOURCE_CAMERA](https://myflashlab.github.io/asdoc/com/myflashlab/air/extensions/nativePermissions/PermissionCheck.html#SOURCE_CAMERA)  
 
 # Commercial Version
 http://www.myflashlabs.com/product/virtual-reality-air-native-extension/
