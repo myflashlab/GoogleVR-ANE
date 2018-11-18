@@ -1,4 +1,4 @@
-# Google VR ANE V3.1.0 for Android+iOS
+# Google VR ANE V3.1.1 for Android+iOS
 Google Virtual Reality SDK works on Android and iOS so why shouldn't it work on Air? This cool ANE will let you use 360 images and videos in your own AIR application.
 
 *Notice: Supporting Virtual 3D world is not in our to-do list. At least not for the moment, because rendering the 3D world in Virtual Reality is happening in OpenGL inside the native environment and ANEs cannot provide this feature to AS3* 
@@ -303,6 +303,10 @@ http://www.myflashlabs.com/product/virtual-reality-air-native-extension/
 [How to embed ANEs into **FlashBuilder**, **FlashCC** and **FlashDevelop**](https://www.youtube.com/watch?v=Oubsb_3F3ec&list=PL_mmSjScdnxnSDTMYb1iDX4LemhIJrt1O)  
 
 # Changelog
+*Nov 18, 2018 - V3.1.1*
+* Works with OverrideAir ANE V5.6.1 or higher
+* Works with ANELAB V1.1.26 or higher
+
 *Sep 22, 2018 - V3.1.0*
 * Removed androidSupport dependency
 * Synced iOS frameworks with Firebase ANEs. Update "GoogleToolboxForMac.framework" and "GTMSessionFetcher.framework" to [V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip)

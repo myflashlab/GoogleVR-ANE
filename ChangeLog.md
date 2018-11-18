@@ -1,5 +1,9 @@
 Google VR Adobe Air Native Extension
 
+*Nov 18, 2018 - V3.1.1*
+* Works with OverrideAir ANE V5.6.1 or higher
+* Works with ANELAB V1.1.26 or higher
+
 *Sep 22, 2018 - V3.1.0*
 * Removed androidSupport dependency
 * Synced iOS frameworks with Firebase ANEs. Update "GoogleToolboxForMac.framework" and "GTMSessionFetcher.framework" to [V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip)
