@@ -167,15 +167,13 @@ public class Demo extends Sprite
 		}
 	}
 	
-	private function myDebuggerDelegate($ane:String, $class:String, $msg:String):void
-	{
-		trace("\t "+$ane+": "+$msg);
-	}
-	
 	private function init():void
 	{
-		// remove this line in production build or pass null as the delegate
-		OverrideAir.enableDebugger(myDebuggerDelegate);
+		// Remove OverrideAir debugger in production builds
+		OverrideAir.enableDebugger(function ($ane:String, $class:String, $msg:String):void
+		{
+			trace($ane+" ("+$class+") "+$msg);
+		});
 		
 		VR.init();
 		
