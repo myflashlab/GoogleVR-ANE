@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<application xmlns="http://ns.adobe.com/air/application/31.0">
+<application xmlns="http://ns.adobe.com/air/application/32.0">
   <id>com.doitflash.gvr</id>
-  <versionNumber>3.1.1</versionNumber>
+  <versionNumber>3.1.11</versionNumber>
   <supportedProfiles>mobileDevice</supportedProfiles>
   <filename>exGoogleVR</filename>
   <name>Google VR</name>
@@ -13,7 +13,7 @@
 	
 	<!--Android SDK 19 or higher can run Google VR only-->
 	<uses-sdk android:minSdkVersion="19" />
-	<uses-sdk android:targetSdkVersion="26"/>
+	<uses-sdk android:targetSdkVersion="28"/>
 	
 	
 	<!-- 
@@ -50,9 +50,9 @@
 	  
 	 <InfoAdditions><![CDATA[
 	
-		<!--iOS 9.0 or higher can support this ANE-->
+		<!--iOS 10.0 or higher can support this ANE-->
 		<key>MinimumOSVersion</key>
-		<string>9.0</string>
+		<string>10.0</string>
 		 
 		<key>UIPrerenderedIcon</key>
 		<true/>

@@ -188,7 +188,7 @@ FOR ANDROID:
 	
 	<!--Android SDK 19 or higher can run Google VR only-->
 	<uses-sdk android:minSdkVersion="19" />
-	<uses-sdk android:targetSdkVersion="26"/>
+	<uses-sdk android:targetSdkVersion="28"/>
 	
 	<!-- 
 		For Google VR to work properly, it is adviced to set largeHeap to true. learn
@@ -226,9 +226,9 @@ FOR iOS:
 -->
 	<InfoAdditions>
 	
-		<!--iOS 8.0 or higher can support this ANE-->
+		<!--iOS 10.0 or higher can support this ANE-->
 		<key>MinimumOSVersion</key>
-		<string>8.0</string>
+		<string>10.0</string>
 		
 		<!-- Bypass iOS security when debugging your app and you need to load resources from a local server like http://192.168.x.x -->
 		<key>NSAppTransportSecurity</key>
