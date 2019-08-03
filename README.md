@@ -274,7 +274,7 @@ Embedding the ANE:
 
 # Requirements 
 1. Android API 19+
-2. iOS SDK 9.0+
+2. iOS SDK 10.0+
 3. AIR SDK 30+
 4. On the iOS side, you need to make sure you have included the resources at the root of you package. 
   * **CardboardSDK.bundle**
@@ -282,7 +282,7 @@ Embedding the ANE:
   * **GoogleKitDialogs.bundle**
   * **GoogleKitHUD.bundle**
   * **MaterialRobotoFontLoader.bundle**
-5. Moreover, on the iOS side, you will need **GoogleToolboxForMac.framework** and **GTMSessionFetcher.framework** available in your *AIR_SDK/lib/aot/stub* folder. Download them from [this package - Firebase SDK V5.4.1](https://dl.google.com/firebase/sdk/ios/5_4_1/Firebase-5.4.1.zip).
+5. Moreover, on the iOS side, you will need **GoogleToolboxForMac.framework** and **GTMSessionFetcher.framework** available in your *AIR_SDK/lib/aot/stub* folder. Download them from [this package - Firebase SDK V5.20.2](https://dl.google.com/firebase/sdk/ios/5_20_2/Firebase-5.20.2.zip).
 
 # Permissions
 Below are the list of Permissions this ANE might require. Check out the demo project available at this repository to see how we have used the [PermissionCheck ANE](http://www.myflashlabs.com/product/native-access-permission-check-settings-menu-air-native-extension/) to ask for the permissions.

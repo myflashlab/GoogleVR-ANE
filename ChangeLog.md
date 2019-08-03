@@ -4,6 +4,7 @@ Google VR Adobe Air Native Extension
 * Added Android 64-bit support
 * Removed **.os** property, use ```OverrideAir.os``` instead.
 * Supports iOS 10+
+* Synced iOS frameworks with Firebase ANEs. Update "GoogleToolboxForMac.framework" and "GTMSessionFetcher.framework" to [V5.20.2](https://dl.google.com/firebase/sdk/ios/5_20_2/Firebase-5.20.2.zip)
 
 *Nov 18, 2018 - V3.1.1*
 * Works with OverrideAir ANE V5.6.1 or higher
